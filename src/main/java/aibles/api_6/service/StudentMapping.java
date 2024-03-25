@@ -1,6 +1,6 @@
-package aibles.api_6.Service;
+package aibles.api_6.service;
 
-import aibles.api_6.Entity.StudentEntity;
+import aibles.api_6.entity.StudentEntity;
 import aibles.api_6.dto.StudentRequest;
 import aibles.api_6.dto.StudentResponse;
 

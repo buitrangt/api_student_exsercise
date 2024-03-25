@@ -1,4 +1,4 @@
-package aibles.api_6.Service;
+package aibles.api_6.service;
 
 import aibles.api_6.dto.StudentRequest;
 import aibles.api_6.dto.StudentResponse;
