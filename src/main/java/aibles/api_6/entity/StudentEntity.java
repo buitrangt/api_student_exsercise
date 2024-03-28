@@ -1,4 +1,4 @@
-package aibles.api_6.Entity;
+package aibles.api_6.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,6 +1,6 @@
-package aibles.api_6.Controller;
+package aibles.api_6.controller;
 
-import aibles.api_6.Service.StudentService;
+import aibles.api_6.service.StudentService;
 import aibles.api_6.dto.StudentRequest;
 import aibles.api_6.dto.StudentResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/student")
+@RequestMapping("api/v1/students")
 @Slf4j
 public class StudentController {
     private final StudentService service;
