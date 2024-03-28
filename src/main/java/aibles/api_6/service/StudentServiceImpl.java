@@ -8,6 +8,7 @@ import aibles.api_6.dto.StudentRequest;
 import aibles.api_6.dto.StudentResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,6 +26,7 @@ public class StudentServiceImpl implements StudentService {
         this.studentRepository = studentRepository;
     }
 
+    @Transactional
     @Override
     public StudentResponse create(StudentRequest request) {
         log.info(" === Start api create new student === ");
@@ -41,6 +43,7 @@ public class StudentServiceImpl implements StudentService {
         }
     }
 
+    @Transactional
     @Override
     public List<StudentResponse> getAllStudents() {
         log.info(" === Start api get all students === ");
@@ -57,6 +60,7 @@ public class StudentServiceImpl implements StudentService {
         }
     }
 
+    @Transactional
     @Override
     public StudentResponse getStudentById(String id) {
         log.info(" === Start api get student by id : {} === ", id);
@@ -76,6 +80,7 @@ public class StudentServiceImpl implements StudentService {
         }
     }
 
+    @Transactional
     @Override
     public StudentResponse updateStudent(String id, StudentRequest request) {
         log.info(" === Start api update student with id : {} === ", id);
@@ -100,6 +105,7 @@ public class StudentServiceImpl implements StudentService {
         }
     }
 
+    @Transactional
     @Override
     public void deleteStudent(String id) {
         log.info(" === Start api delete student with id : {} === ", id);
