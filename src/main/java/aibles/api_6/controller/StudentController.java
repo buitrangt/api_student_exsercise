@@ -38,7 +38,14 @@ public class StudentController {
         return responses;
     }
 
-
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public StudentResponse getStudentById(@PathVariable String id) {
+        log.info(" === Start api get student by id : {} === ", id);
+        StudentResponse response = service.getStudentById(id);
+        log.info(" === Finish api get student by id : {}, Student : {} === ", id, response);
+        return response;
+    }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
